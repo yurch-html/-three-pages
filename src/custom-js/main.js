@@ -31,4 +31,76 @@ $(document).ready(function(){
 
     return false;
   });
+  
+//  slick
+  $(".comment-slider").slick({
+    infinite: true,
+    slidesToScroll: 1,
+    slidesToShow: 4,
+    dots: true,
+    arrows: false,
+    responsive: [{
+      breakpoint: 767,
+      settings: {
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        centerMode: false,
+        infinite: true
+      }
+    }]
+  });
+  
+  $(".file-slider-1").slick({
+    infinite: true,
+    slidesToScroll: 1,
+    slidesToShow: 1,
+    dots: true,
+    arrows: false,
+  });
+  
+  $(".file-slider-2").slick({
+    infinite: true,
+    slidesToScroll: 1,
+    slidesToShow: 1,
+    dots: true,
+    arrows: false,
+  });
 });
+
+
+$(document).ready(function() {
+  /*
+			 *  Simple image gallery. Uses default settings
+			 */
+
+  $('.fancybox').fancybox();
+
+  /*
+			 *  Different effects
+			 */
+
+  // Change title type, overlay closing speed
+  $(".fancybox-effects-a").fancybox({
+    helpers: {
+      title : {
+        type : 'outside'
+      },
+      overlay : {
+        speedOut : 0
+      }
+    }
+  });
+
+});
+
+
+
+
+
+
+
+
+
+
+
+

@@ -2,6 +2,7 @@ body{
   font-family: $helneue;
   font-size: 16px;
   letter-spacing: .02em;
+  counter-reset: step-sect;
 }
 
 .container{
@@ -13,6 +14,10 @@ body{
   @media screen and (max-width: $threed-media) {
     width: 100%;
   }
+}
+
+.brand-color {
+  color: #aa62f4;
 }
 
 //@media screen and (max-height: 700px) {

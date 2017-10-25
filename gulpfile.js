@@ -52,7 +52,8 @@ gulp.task('watch', ['css-min', 'minjs','css-min-style', 'libjs', 'html'], functi
 gulp.task('libjs', function(){
 	return gulp.src([
 		'src/libs-js/jquery-1.11.0.min.js',
-//		'src/libs-js/slick.js',
+    'src/libs-js/slick.min.js',
+    'src/libs-js/jquery.fancybox.js',
 		
 //		LIBJS
 	])

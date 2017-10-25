@@ -427,6 +427,20 @@
   text-align: center;
   letter-spacing: .02em;
   line-height: 1.2;
+  
+  &.sect-title--fff {
+    color: #fff;
+  }
+}
+
+.subtitle {
+  padding-top: 18px;
+  font-weight: 400;
+  font-size: 1.25em;
+  letter-spacing: .02em;
+  color: #c1c1c1;
+  text-align: center;
+  line-height: 1.4;
 }
 
 //.danger-sect
