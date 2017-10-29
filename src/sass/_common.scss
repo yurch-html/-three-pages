@@ -20,15 +20,15 @@ body{
   color: #aa62f4;
 }
 
-//@media screen and (max-height: 700px) {
-//  html {
-//    font-size: 9px;
-//  }
-//  
-//  body {
-//    font-size: 15px;
-//  }
-//}
+@media screen and (max-height: 700px) {
+  html {
+    font-size: 9px;
+  }
+  
+  body {
+    font-size: 15px;
+  }
+}
 
 @media screen and (max-width: $first-media) {
   html {
