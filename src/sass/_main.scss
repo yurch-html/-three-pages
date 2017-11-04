@@ -1,3 +1,18 @@
+.header-page {
+  & > .container {
+    display: flex;
+    align-items: center;
+  }
+}
+
+.header-page__logo {
+  margin-right: 5rem;
+}
+
+.header-page__contact {
+  margin-left: auto;
+}
+
 .top-section {
   position: relative;
   z-index: 1;
@@ -434,6 +449,7 @@
 }
 
 .three-section {
+  overflow: hidden;
   background-image: linear-gradient(#222326, #3c3f44);
 }
 
@@ -1870,6 +1886,7 @@ li.slick-active > button{
 
 //.prew-step
 .prew-step {
+  overflow: hidden;
   background-image: 
     url('../img/bg/page3-sect1.png'),
     linear-gradient(#3c3f44, #232528);

@@ -65,19 +65,9 @@ $(document).ready(function(){
     dots: true,
     arrows: false,
   });
-});
-
-
-$(document).ready(function() {
-  /*
-			 *  Simple image gallery. Uses default settings
-			 */
+  
 
   $('.fancybox').fancybox();
-
-  /*
-			 *  Different effects
-			 */
 
   // Change title type, overlay closing speed
   $(".fancybox-effects-a").fancybox({
@@ -90,8 +80,34 @@ $(document).ready(function() {
       }
     }
   });
-
+  
+  $('.js-call').click(function(){
+    $('.js-call-modall').addClass('active');
+    $('body').addClass('modal-fixed');
+  });
+  
+  $('.close-btn, .modal-wrap__close').click(function(){
+    $('.modal-wrap').removeClass('active');
+    $('body').removeClass('modal-fixed');
+  });
+  
+  $('.js-modal-1').click(function(){
+    $('.modal-1').addClass('active');
+    $('body').addClass('modal-fixed');
+  });
+  
+  $('.js-modal-2').click(function(){
+    $('.modal-2').addClass('active');
+    $('body').addClass('modal-fixed');
+  });
+  
+  $('.js-modal-3').click(function(){
+    $('.modal-3').addClass('active');
+    $('body').addClass('modal-fixed');
+  });
 });
+
+
 
 
 
