@@ -134,7 +134,7 @@
     transition: transform .3s;
   }
   
-  &:hover{
+  &:hover, &:focus{
     color: #fff;
     -webkit-text-stroke: .01em currentColor;
     
@@ -200,7 +200,7 @@
     height: 1.5em;
     margin-right: 1.2em;
     
-    &:hover {
+    &:hover, &:focus {
       color: inherit;
     }
   }
@@ -258,7 +258,7 @@
   animation: arrowbot 3s linear infinite;
   will-change: transform;
   
-  &:hover {
+  &:hover, &:focus {
     filter: drop-shadow(0px 0px 3px $brand-color);
   }
   
@@ -404,7 +404,7 @@
     border-left: 14px solid currentColor;
   }
   
-  &:hover {
+  &:hover, &:focus {
     color: $brand-color;
     background-color: rgba($brand-color, .1);
   }

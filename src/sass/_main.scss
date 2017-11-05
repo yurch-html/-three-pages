@@ -255,7 +255,7 @@
     max-width: 244px;
     width: 100%;
 
-    &:hover {
+    &:hover, &:focus {
       background-color: #fff;
     }
   }
@@ -444,6 +444,11 @@
 .alternative {
   position: relative;
   z-index: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
   padding-top: 7rem;
   padding-bottom: 3rem;
 }
@@ -1026,7 +1031,7 @@
   border: 1px solid $lightgrey;
   transition: boder-color .3s, box-shadow .3s;
   
-  &:hover {
+  &:hover, &:focus {
     box-shadow: 0 0 20px $lightgrey;
     border-color: transparent;
   }
@@ -1490,7 +1495,7 @@ li.slick-active > button{
   background-position: center;
   box-shadow: 0 0 20px rgba(0,0,0,.1);
   
-  &:hover:before {
+  &:hover:before, &:focus:before {
     opacity: 1;
   }
   
@@ -1910,7 +1915,7 @@ li.slick-active > button{
 
 .prew-step__desc {
   max-width: 550px;
-  padding: 7rem 0;
+  padding: 5rem 0;
   
   @media screen and (max-width: $first-media) {
     width: 100%;
