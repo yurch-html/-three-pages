@@ -942,6 +942,10 @@
   width: 100%;
   max-width: 488px;
   padding-right: 13.250rem;
+  
+  @media screen and (max-width: $second-media) { 
+    margin-bottom: 50px;
+  }
 }
 
 .about-section__top {
