@@ -576,7 +576,7 @@
   @media screen and (max-width: $second-media) { 
     width: 100%;
     padding: 0;
-    margin-bottom: 20px;
+    margin-bottom: 80px;
   }
 }
 
@@ -866,7 +866,7 @@
     @media screen and (max-width: $second-media) { 
       width: 100%;
       padding: 0;
-      margin-bottom: 20px;
+      margin-bottom: 80px;
     }
   }
   
@@ -924,6 +924,7 @@
 .about-section{
   padding-top: 5.6rem;
   padding-bottom: 8rem;
+  overflow: hidden;
 }
 
 .about-section__desc {
@@ -940,7 +941,7 @@
 .about-section__img {
   width: 100%;
   max-width: 488px;
-  padding-right: 4.250rem;
+  padding-right: 13.250rem;
 }
 
 .about-section__top {
@@ -956,10 +957,9 @@
 .img-comand {
   position: relative;
   padding-bottom: 100%;
-  background-image: url('../img/bg/comand.png');
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: contain;
+  background-color: $lightgrey;
+  border-radius: 50%;
+
   
   &:before {
     content: '';
@@ -971,7 +971,22 @@
     height: 100%;
     border-radius: 50%;
     @include lightgradient();
-    transform: translate(2rem, 2rem);
+    transform: translate(8rem, 2rem);
+  }
+  
+  &:after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    top: 0;
+    width: 130%;
+    height: 105%;
+    border-radius: 50% 0 0 50%;
+    background-image: url('../img/bg/comand.png');
+    background-position: left  bottom;
+    background-repeat: no-repeat;
+    background-size: 104%;
   }
 }
 
@@ -1134,7 +1149,7 @@ li.slick-active > button{
     @media screen and (max-width: $second-media) { 
       width: 100%;
       padding: 0;
-      margin-bottom: 20px;
+      margin-bottom: 80px;
     }
   }
   
@@ -1229,7 +1244,7 @@ li.slick-active > button{
     padding-top: 2rem;
     
     @media screen and (max-width: $second-media) { 
-      margin-bottom: 40px;
+      margin-bottom: 80px;
     }
   }
   
@@ -1439,11 +1454,10 @@ li.slick-active > button{
   padding: 6.5rem 0;
   background-repeat: no-repeat;
   background-image: 
-    url('../img/bg/girlleft.png'),
     url('../img/bg/men2.png'),
     linear-gradient(#fff, #e3e3e3);
-  background-size: 21%, 20%, 100%;
-  background-position:  left bottom, right bottom, center;
+  background-size: 18%, 100%;
+  background-position: right bottom, center;
   
   @media screen and (max-width: $first-media) { 
     background-image: linear-gradient(#fff, #e3e3e3);
@@ -1811,20 +1825,25 @@ li.slick-active > button{
   width: 100%;
   max-width: 435px;
   padding-right: 15px;
+  padding-top: 7rem;
   
   @media screen and (max-width: $second-media) { 
     padding: 0;
     margin-bottom: 40px;
   }
+  
+  @media screen and (max-width: $second-media) {
+    max-width: 100%;
+    padding-top: 100px;
+  }
 }
 
 .item-img {
   position: relative;
-  padding-bottom: 120%;
-  background-image: url('../img/bg/menreverce.png');
-  background-size: contain;
-  background-position: center;
-  background-repeat: no-repeat;
+  padding-bottom: 100%;
+  background-color: $brand-color;
+  border-radius: 50%;
+
   
   &:before {
     content: '';
@@ -1838,11 +1857,30 @@ li.slick-active > button{
     @include lightgradient();
     transform: translate( -5%, 10%);
   }
+  
+  &:after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 120%;
+    border-radius: 50%;
+    background-image: url('../img/bg/men2.png');
+    background-size: 70% auto;
+    background-position: center top;
+    background-repeat: no-repeat;
+    transform:scale(-1 ,1)
+  }
 }
 
 .section__item-desc {
   width: 100%;
   max-width: 556px;
+  
+  @media screen and (max-width: $second-media) {
+    max-width: 100%;
+  }
 }
 
 .section__form {
@@ -1851,6 +1889,10 @@ li.slick-active > button{
   .form-input {
     background-color: #f1f1f1;
     color: $dkgrey;
+  }
+  
+  @media screen and (max-width: $second-media) {
+    max-width: 100%;
   }
 }
 
