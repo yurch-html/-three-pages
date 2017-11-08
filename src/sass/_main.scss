@@ -941,7 +941,8 @@
 .about-section__img {
   width: 100%;
   max-width: 488px;
-  padding-right: 13.250rem;
+  padding-right: 110px;
+  overflow: hidden;
   
   @media screen and (max-width: $second-media) { 
     margin-bottom: 50px;
@@ -1045,7 +1046,6 @@
 }
 
 .comment-item {
-  padding: 20px;
   margin: 15px;
   border: 1px solid $lightgrey;
   transition: boder-color .3s, box-shadow .3s;
@@ -1053,6 +1053,10 @@
   &:hover, &:focus {
     box-shadow: 0 0 20px $lightgrey;
     border-color: transparent;
+  }
+  
+  .file-img {
+    padding-bottom: 140%;
   }
 }
 
@@ -1107,6 +1111,7 @@
     background-color: transparent;
     font-size: 0;
     width: 34px;
+    height: 34px;
 
     &:before {
       counter-increment: slider;
@@ -1140,6 +1145,7 @@ li.slick-active > button{
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-wrap: wrap;
     padding-top: 3.3rem;
   }
 }
