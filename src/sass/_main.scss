@@ -71,6 +71,10 @@
     width: 18em;
     height: 17.5em;
     @include gradient();
+    
+    @media screen and (max-width: $threed-media) { 
+      display: none;
+    }
   }
 }
 
@@ -85,6 +89,10 @@
   line-height: 1.4;
   font-weight: 600;
   color: $lightgrey;
+  
+  @media screen and (max-width: $threed-media) { 
+    display: none;
+  }
 }
 
 .title-sect__tltle {
@@ -138,6 +146,14 @@
     height: 70%;
     width: 11%;
     @include gradient();
+    
+    @media screen and (max-width: $first-media) {
+      width: 24%;
+    }
+    
+    @media screen and (max-width: $second-media) {
+      width: 30%;
+    }
   }
 }
 
@@ -576,7 +592,7 @@
   @media screen and (max-width: $second-media) { 
     width: 100%;
     padding: 0;
-    margin-bottom: 80px;
+    margin-bottom: 60px;
   }
 }
 
@@ -866,7 +882,7 @@
     @media screen and (max-width: $second-media) { 
       width: 100%;
       padding: 0;
-      margin-bottom: 80px;
+      margin-bottom: 60px;
     }
   }
   
@@ -941,11 +957,12 @@
 .about-section__img {
   width: 100%;
   max-width: 488px;
-  padding-right: 110px;
+  padding-right: 19.4vw;
   overflow: hidden;
   
   @media screen and (max-width: $second-media) { 
     margin-bottom: 50px;
+    max-width: 100%;
   }
 }
 
@@ -1038,7 +1055,15 @@
 }
 
 .about-section__comment {
-  padding-top: 7.4rem;
+  padding-top: 6.4rem;
+  
+  @media screen and (max-width: $first-media) {
+    padding-top: 3.4rem;
+  }
+  
+  @media screen and (max-width: $second-media) {
+    padding-top: 0;
+  }
 }
 
 .about-section__comment-title {
@@ -1159,7 +1184,7 @@ li.slick-active > button{
     @media screen and (max-width: $second-media) { 
       width: 100%;
       padding: 0;
-      margin-bottom: 80px;
+      margin-bottom: 60px;
     }
   }
   
@@ -1254,7 +1279,7 @@ li.slick-active > button{
     padding-top: 2rem;
     
     @media screen and (max-width: $second-media) { 
-      margin-bottom: 80px;
+      margin-bottom: 60px;
     }
   }
   
@@ -2231,6 +2256,7 @@ li.slick-active > button{
   
   @media screen and (max-width: $first-media) {
     background: none;
+    padding-bottom: 0;
   }
 }
 
