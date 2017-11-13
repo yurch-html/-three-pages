@@ -957,11 +957,9 @@
 .about-section__img {
   width: 100%;
   max-width: 488px;
-  padding-right: 19.4vw;
-  overflow: hidden;
+  margin-bottom: 30px;
   
   @media screen and (max-width: $second-media) { 
-    margin-bottom: 50px;
     max-width: 100%;
   }
 }
@@ -979,8 +977,12 @@
 .img-comand {
   position: relative;
   padding-bottom: 100%;
-  background-color: $lightgrey;
   border-radius: 50%;
+  border-radius: 50% 0 0 50%;
+  background-image: url('../img/bg/comand.png');
+  background-position: left  bottom;
+  background-repeat: no-repeat;
+  background-size: 104%;
 
   
   &:before {
@@ -993,7 +995,7 @@
     height: 100%;
     border-radius: 50%;
     @include lightgradient();
-    transform: translate(8rem, 2rem);
+    transform: translate(3rem,0);
   }
   
   &:after {
@@ -1001,14 +1003,12 @@
     position: absolute;
     left: 0;
     bottom: 0;
-    top: 0;
-    width: 130%;
-    height: 105%;
-    border-radius: 50% 0 0 50%;
-    background-image: url('../img/bg/comand.png');
-    background-position: left  bottom;
-    background-repeat: no-repeat;
-    background-size: 104%;
+    bottom: 18px;
+    z-index: -1;
+    width: 90%;
+    height: 90%;
+    background-color: $lightgrey;
+    border-radius: 50%;
   }
 }
 
@@ -1021,6 +1021,10 @@
   color: $dkgrey;
   font-weight: 700;
   font-size: 1.875em;
+  
+  @media screen and (max-width: $second-media) {
+    margin-bottom: .5em;
+  }
 }
 
 .about-section__desc-text {
@@ -1266,7 +1270,7 @@ li.slick-active > button{
       padding: 0;
       
       .step-img {
-        padding: 0;
+        padding-right: 0;
       }
     }
   }
@@ -1395,6 +1399,7 @@ li.slick-active > button{
   
   @media screen and (max-width: $first-media){
     background: none;
+    padding-bottom: 3rem;
   }
 }
 
