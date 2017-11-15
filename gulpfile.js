@@ -54,6 +54,7 @@ gulp.task('libjs', function(){
 		'src/libs-js/jquery-1.11.0.min.js',
     'src/libs-js/slick.min.js',
     'src/libs-js/jquery.fancybox.js',
+    'src/libs-js/jquery.maskedinput.min.js',
 		
 //		LIBJS
 	])

@@ -42,7 +42,7 @@ $(document).ready(function(){
     responsive: [{
       breakpoint: 1024,
       settings: {
-        slidesToShow: 1,
+        slidesToShow: 2,
         slidesToScroll: 1,
         centerMode: false,
         infinite: true
@@ -50,23 +50,7 @@ $(document).ready(function(){
     }]
   });
   
-  $(".file-slider-1").slick({
-    infinite: true,
-    slidesToScroll: 1,
-    slidesToShow: 1,
-    dots: true,
-    arrows: false,
-  });
-  
-  $(".file-slider-2").slick({
-    infinite: true,
-    slidesToScroll: 1,
-    slidesToShow: 1,
-    dots: true,
-    arrows: false,
-  });
-  
-
+  /////////////////////////
   $('.fancybox').fancybox();
 
   // Change title type, overlay closing speed
@@ -81,6 +65,7 @@ $(document).ready(function(){
     }
   });
   
+  /////////////////////////
   $('.js-call').click(function(){
     $('.js-call-modall').addClass('active');
     $('body').addClass('modal-fixed');
@@ -105,6 +90,9 @@ $(document).ready(function(){
     $('.modal-3').addClass('active');
     $('body').addClass('modal-fixed');
   });
+  
+  /////////////////////////  
+  $('input[type="tel"]').inputmask({"mask": "+7(999) 999-99-99"});
 });
 
 

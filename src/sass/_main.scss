@@ -1,4 +1,7 @@
 .header-page {
+  width: 100%;
+  margin-bottom: 20px;
+  
   & > .container {
     display: flex;
     align-items: center;
@@ -32,6 +35,11 @@
   z-index: 1;
   margin: auto 0;
   padding-top: 40px;
+  
+  @media screen and (max-width: $threed-media) { 
+   margin-bottom: 0;
+    margin-top: auto;
+  }
 }
 
 .title-sect__text {
@@ -89,6 +97,10 @@
   line-height: 1.4;
   font-weight: 600;
   color: $lightgrey;
+  
+  @media screen and (max-width: $second-media) { 
+    width: 76%;
+  }
   
   @media screen and (max-width: $threed-media) { 
     display: none;
@@ -465,8 +477,12 @@
   justify-content: center;
   align-items: center;
   min-height: 100vh;
-  padding-top: 7rem;
+  padding-top: 2rem;
   padding-bottom: 3rem;
+  
+  & > .container {
+    margin: auto;
+  }
 }
 
 .three-section {
@@ -476,6 +492,10 @@
 
 .alternative__title {
   margin-bottom: 7rem;
+  
+  @media screen and (max-width: $mobil400) { 
+    margin-bottom: 30px;
+  }
 }
 
 .border-info-sect {
@@ -496,7 +516,7 @@
     border-image: linear-gradient(90deg, $brand-color -150%, #6b656c 50%);
     border-image-slice: 1;
     
-    @media screen and (max-width: $second-media) { 
+    @media screen and (max-width: $first-media) { 
       width: 100%;
     }
   }
@@ -504,13 +524,13 @@
   &:after {
     content: "";
     position: absolute;
-    bottom: 0;
+    bottom: 7px;
     right: -9%;
-    width: 40%;
+    width: 42%;
     height: 148%;
     background-image: url(../img/bg/femida.png);
     background-size: auto 100%;
-    background-position: right 7px bottom 7px;
+    background-position: right 8px bottom 0px;
     background-repeat: no-repeat;
     
     @media screen and (max-width: $second-media) { 
@@ -610,7 +630,7 @@
 }
 
 .sect-step--1 {
-  padding-top: 8rem;
+  padding-top: 40px;
   padding-bottom: 3rem;
   background-repeat: no-repeat;
   background-image: 
@@ -671,11 +691,19 @@
     display: block;
     padding-bottom: 100%;
   }
+  
+  @media screen and (max-width: $threed-media) { 
+    min-width: 4em;
+  }
 }
 
 .sect-step--1, .sect-step--3 {
   .sect-step__ico-text-ico {
     margin-left: -22px;
+    
+    @media screen and (max-width: $threed-media) { 
+      margin-left: 0;
+    }
   }
 }
 
@@ -934,6 +962,10 @@
   color: #9ea2a9;
   font-size: 1.875em;
   line-height: 1.4;
+  
+  @media screen and (max-width: $threed-media) { 
+    font-size: 1.4em;
+  }
 }
 
 //.about-section
@@ -956,11 +988,12 @@
 
 .about-section__img {
   width: 100%;
-  max-width: 488px;
+  max-width: 540px;
   margin-bottom: 30px;
   
   @media screen and (max-width: $second-media) { 
-    max-width: 100%;
+    margin: auto;
+    margin-bottom: 40px;
   }
 }
 
@@ -976,40 +1009,11 @@
 
 .img-comand {
   position: relative;
-  padding-bottom: 100%;
-  border-radius: 50%;
-  border-radius: 50% 0 0 50%;
+  padding-bottom: 70%;
   background-image: url('../img/bg/comand.png');
   background-position: left  bottom;
   background-repeat: no-repeat;
-  background-size: 104%;
-
-  
-  &:before {
-    content: '';
-    position: absolute;
-    z-index: -1;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    border-radius: 50%;
-    @include lightgradient();
-    transform: translate(3rem,0);
-  }
-  
-  &:after {
-    content: '';
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    bottom: 18px;
-    z-index: -1;
-    width: 90%;
-    height: 90%;
-    background-color: $lightgrey;
-    border-radius: 50%;
-  }
+  background-size: contain;
 }
 
 .subtitle.subtitle--dk {
@@ -1399,7 +1403,10 @@ li.slick-active > button{
   
   @media screen and (max-width: $first-media){
     background: none;
-    padding-bottom: 3rem;
+  }
+  
+  @media screen and (max-width: $mobil400){
+    padding-bottom: 2rem;
   }
 }
 
@@ -1500,7 +1507,7 @@ li.slick-active > button{
   background-position: right bottom, center;
   
   @media screen and (max-width: $first-media) { 
-    background-image: linear-gradient(#fff, #e3e3e3);
+    background-image: linear-gradient(#fafafa, #e3e3e3);
     background-size: 100% 100%;
   }
 }
@@ -1683,9 +1690,18 @@ li.slick-active > button{
   background-position: center;
   background-repeat: no-repeat;
   
+  & > .container {
+    position: relative;
+    z-index: 0;
+  }
+  
   @media screen and (max-width: $second-media) { 
     background-image: linear-gradient(#3c3f44, #1f1f23);
     background-size: 100%;
+  }
+  
+  @media screen and (max-width: $threed-media) { 
+    font-size: 12px;
   }
 }
 
@@ -1756,6 +1772,10 @@ li.slick-active > button{
   font-weight: 700;
   font-size: 1.560em;
   text-transform: uppercase;
+  
+  @media screen and (max-width: $threed-media) { 
+    font-size: 1em;
+  }
 }
 
 .price-sect__info-sub {
@@ -1799,6 +1819,8 @@ li.slick-active > button{
     &:after {
       position: absolute;
       left: 0;
+      bottom: 0;
+      z-index: -1;
       width: 100%;
     }
   }
@@ -1818,6 +1840,10 @@ li.slick-active > button{
   color: #b0b5be;
   font-size: 2.188em;
   line-height: 1.2;
+  
+  @media screen and (max-width: $threed-media) { 
+    font-size: 1.2em;
+  }
 }
 
 .conditions-local__ico-sect {
@@ -1869,12 +1895,14 @@ li.slick-active > button{
   
   @media screen and (max-width: $second-media) { 
     padding: 0;
-    margin-bottom: 40px;
+    padding-top: 100px;
+    margin: auto;
+    margin-bottom: 56px;
   }
   
-  @media screen and (max-width: $second-media) {
-    max-width: 100%;
-    padding-top: 100px;
+
+  @media screen and (max-width: $mobil400) { 
+    padding-top: 54px;
   }
 }
 
@@ -1973,6 +2001,10 @@ li.slick-active > button{
 
 //.prew-step
 .prew-step {
+  flex-direction: column;
+  display: flex;
+  min-height: 100vh;
+  padding-top: 2rem;
   overflow: hidden;
   background-image: 
     url('../img/bg/page3-sect1.png'),
@@ -1983,23 +2015,39 @@ li.slick-active > button{
   background-repeat: no-repeat;
   
   & > .container {
-    display: flex;
-    justify-content: space-between;
     position: relative;
     z-index: 1;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin-top: auto;
+    
+    @media screen and (max-width: $second-media) {
+      margin: auto;
+      width: 80%;
+    }
+
+    @media screen and (max-width: $threed-media) {
+      margin: auto;
+      width: 100%;
+    }
   }
   
-  @media screen and (max-width: $first-media) {
-    background-image: linear-gradient(#3c3f44, #232528);
-    background-size: 100% 100%;
+  .men-dekor {
+    height: 100%;
   }
 }
 
 .prew-step__desc {
   max-width: 550px;
-  padding: 5rem 0;
+  padding-bottom: 3rem;
   
   @media screen and (max-width: $first-media) {
+    padding-bottom: 6rem;
+  }
+  
+  @media screen and (max-width: $second-media) {
     width: 100%;
     max-width: 100%;
   }
@@ -2010,7 +2058,7 @@ li.slick-active > button{
     transform: scale(-1, 1);
   }
 
-  @media screen and (max-width: $first-media) {
+  @media screen and (max-width: $second-media) {
     display: none;
   }
 }
@@ -2021,6 +2069,10 @@ li.slick-active > button{
   font-size: 1.875em;
   color: #fff;
   line-height: 1.2;
+  
+  @media screen and (max-width: $threed-media) {
+    font-size: 1.4em;
+  }
 }
 
 .prew-step__title-sub {
@@ -2033,7 +2085,7 @@ li.slick-active > button{
 }
 
 .prew-step__title {
-  margin-bottom: 5rem;
+  margin-bottom: 3rem;
 }
 
 .prew-step-list {
@@ -2047,7 +2099,7 @@ li.slick-active > button{
 .prew-step-list__item {
   width: 50%;
   padding-right: 3rem;
-  margin-bottom: 3rem;
+  margin-bottom: 2rem;
 }
 
 .prew-step-item:before {
@@ -2097,6 +2149,10 @@ li.slick-active > button{
     width: 100%;
     margin-right: 0;
     margin-bottom: 1em;
+  }
+  
+  @media screen and (max-width: $threed-media) {
+   font-size: 1.2em;
   }
 }
 
@@ -2213,7 +2269,7 @@ li.slick-active > button{
 .soc-item {
   display: block;
   width: 25px;
-  height: 20px;
+  height: 25px;
 }
 
 .soc-list__item:not(:last-child) {
@@ -2261,6 +2317,10 @@ li.slick-active > button{
   
   @media screen and (max-width: $first-media) {
     background: none;
+    padding-bottom: 4rem;
+  }
+  
+  @media screen and (max-width: $mobil400) {
     padding-bottom: 0;
   }
 }
@@ -2273,7 +2333,7 @@ li.slick-active > button{
   display: flex;
   color: #9ea2a9;
   
-  @media screen and (max-width: $first-media) {
+  @media screen and (max-width: $second-media) {
     display: block;
   }
 }
@@ -2297,7 +2357,7 @@ li.slick-active > button{
     bottom: 0;
     transform: scale(1,-1) rotate(-85deg);
     
-    @media screen and (max-width: $first-media) {
+    @media screen and (max-width: $second-media) {
       display: none;
     }
   }
@@ -2306,12 +2366,12 @@ li.slick-active > button{
 .garant__desc-ico {
   font-family: $gilroy;
   font-weight: 800;
-  color: #28292d;
+  color: $grey;
   font-size: 12.500rem;
   margin-right: 2rem;
   
-  @media screen and (max-width: $first-media) {
-    display: none;
+  @media screen and (max-width: $second-media) {
+    padding-top: 20px;
   }
 }
 
@@ -2320,8 +2380,9 @@ li.slick-active > button{
   font-size: 1.875em;
   font-weight: 300;
   
-  @media screen and (max-width: $first-media) {
+  @media screen and (max-width: $second-media) {
     padding-top: 30px;
+    font-size: 1.4em;
   }
 }
 
@@ -2343,6 +2404,10 @@ li.slick-active > button{
   
   .btn {
     width: 290px;
+    
+    @media screen and (max-width: 400px) {
+      width: 100%;
+    }
   }
 }
 
@@ -2398,7 +2463,9 @@ li.slick-active > button{
   font-size: 1.250em;
 }
 
-
+.list > li + li {
+  margin-top: 10px;
+}
 
 
 

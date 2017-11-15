@@ -65,5 +65,13 @@ body{
   }
 }
 
+@media screen and (max-width: $mobil400) {
+  html {
+    font-size: 7px;
+  }
 
+  body {
+    font-size: 12px;
+  }
+}
 
