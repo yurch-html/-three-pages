@@ -3,8 +3,7 @@ if($('#video-yt').length > 0) {
   $('body').on('click', '.play-video-ico', function(){
     $(this).attr('disabled', true);
     var iframe = document.createElement('iframe');
-    var VIDEO_ID = $('#video-yt').attr('data-video').split('watch?v=')[1];
-    var linkEmbedVideo = "https://www.youtube.com/embed/" + VIDEO_ID + "?autoplay=1";
+    var linkEmbedVideo = $('#video-yt').attr('data-video');
 
     iframe.setAttribute('frameborder', '0');
     iframe.setAttribute('allowfullscreen', '');

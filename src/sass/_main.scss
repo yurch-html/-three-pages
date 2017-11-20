@@ -714,6 +714,16 @@
   line-height: 1.7;
   font-size: 0.938em;
   color: #efefef;
+  
+  @media screen and (max-width: $threed-media) { 
+    br {
+      display: none;
+    }
+    
+    .brand-color {
+      display: inline-block;
+    }
+  }
 }
 
 .form-step__title {
